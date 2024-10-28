@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "author": "ADITYA SWAROOP",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 77.4, "left": -135, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 69.6,
+      "left": 241.8,
+      "attrs": { "volume": "0.1" }
+    },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -104.1, "left": -71.3, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:GND.3", "bz1:1", "black", [ "v19.1", "h253.6" ] ],
+    [ "bz1:2", "uno:9", "green", [ "v-124.8", "h-288.4" ] ],
+    [ "ultrasonic1:VCC", "uno:5V", "red", [ "v0", "h-201.6", "v316.8", "h230.4" ] ],
+    [ "ultrasonic1:GND", "uno:GND.2", "black", [ "v0", "h306", "v316.8", "h-307.2" ] ],
+    [ "ultrasonic1:TRIG", "uno:11", "green", [ "v0" ] ],
+    [ "ultrasonic1:ECHO", "uno:10", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
